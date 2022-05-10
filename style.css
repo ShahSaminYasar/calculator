@@ -34,7 +34,10 @@ body::after{
     align-items: center;
     background: linear-gradient(90deg, hsla(198, 61%, 20%, 1) 0%, hsla(178, 69%, 14%, 1) 100%);
 }
-.calculator{
+.mcalculator{
+    display: none;
+}
+.dcalculator{
     display: grid;
     width: 250px;
     background: rgba(255, 255, 255, 0.1);
@@ -45,7 +48,7 @@ body::after{
     backdrop-filter: blur(50px);
     color: white;
 }
-.calculator #display{
+.mcalculator #display, .dcalculator #display{
     padding: 40px 10px;
     grid-column: 1/5;
     background-color: transparent;
@@ -57,10 +60,10 @@ body::after{
     border: 1px solid rgba(255, 255, 255, 0.1);
     overflow-x: scroll;
 }
-.calculator #display:focus{
+.mcalculator #display:focus, .dcalculator #display:focus{
     outline: 0;
 }
-.calculator .button{
+.mcalculator .button, .dcalculator .button{
     height: 60px;
     border: 0;
     background: rgba(0, 0, 0, 0.01);
@@ -72,21 +75,21 @@ body::after{
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
 }
-.calculator .equal{
+.mcalculator .equal, .dcalculator .equal{
     background: rgba(0, 70, 255, 0.9);
     color: white;
 }
-.calculator .button:hover{
+.mcalculator .button:hover, .dcalculator .button:hover{
     background: rgba(255, 255, 255, 0.2);
     transition: 0s;
 }
-.calculator .button:focus{
+.mcalculator .button:focus, .dcalculator .button:focus{
     background: rgba(0, 255, 255, 0.1);
 }
-.calculator .equal:hover{
+.mcalculator .equal:hover, .dcalculator .equal:hover{
     background: rgba(0, 90, 200, 0.9);
 }
-.calculator .equal:focus{
+.mcalculator .equal:focus, .dcalculator .equal:focus{
     background: rgba(0, 75, 167, 0.9);
 }
 @media screen and (max-width: 1000px){
@@ -111,6 +114,20 @@ body::after{
     }
     body::after{
         clip-path: circle(16% at 70% 79%);
+    }
+    .dcalculator{
+        display: none;
+    }
+    .mcalculator{
+        display: grid;
+        width: 250px;
+        background: rgba(255, 255, 255, 0.1);
+        grid-template-columns: repeat(4, 1fr);
+        z-index: 999;
+        border-radius: 3px;
+        overflow: hidden;
+        backdrop-filter: blur(50px);
+        color: white;
     }
 }
 @media screen and (max-width: 350px){

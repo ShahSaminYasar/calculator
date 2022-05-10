@@ -10,28 +10,51 @@
 </head>
 <body>
     <div class="container">
-        <form class="calculator" name="calculator">
+        <form class="dcalculator desktop" name="dcalculator">
             <input type="text" readonly name="display" id="display">
-            <input class="button" type="button" value="(" onclick="calculator.display.value += '('">
-            <input class="button" type="button" value=")" onclick="calculator.display.value += ')'">
+            <input class="button" type="button" value="(" onclick="dcalculator.display.value += '('">
+            <input class="button" type="button" value=")" onclick="dcalculator.display.value += ')'">
             <input class="button backspace" type="button" value="&#9003;">
-            <input class="button" type="button" value="+" onclick="calculator.display.value += '+'">
-            <input class="button" type="button" value="7" onclick="calculator.display.value += '7'">
-            <input class="button" type="button" value="8" onclick="calculator.display.value += '8'">
-            <input class="button" type="button" value="9" onclick="calculator.display.value += '9'">
-            <input class="button" type="button" value="/" onclick="calculator.display.value += '/'">
-            <input class="button" type="button" value="4" onclick="calculator.display.value += '4'">
-            <input class="button" type="button" value="5" onclick="calculator.display.value += '5'">
-            <input class="button" type="button" value="6" onclick="calculator.display.value += '6'">
-            <input class="button" type="button" value="*" onclick="calculator.display.value += '*'">
-            <input class="button" type="button" value="1" onclick="calculator.display.value += '1'">
-            <input class="button" type="button" value="2" onclick="calculator.display.value += '2'">
-            <input class="button" type="button" value="3" onclick="calculator.display.value += '3'">
-            <input class="button" type="button" value="-" onclick="calculator.display.value += '-'">
-            <input class="button" type="button" value="0" onclick="calculator.display.value += '0'">
-            <input class="button" type="button" value="." onclick="calculator.display.value += '.'">
-            <input class="button" type="button" value="C" onclick="calculator.display.value = ''">
-            <input class="button equal" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
+            <input class="button" type="button" value="+" onclick="dcalculator.display.value += '+'">
+            <input class="button" type="button" value="7" onclick="dcalculator.display.value += '7'">
+            <input class="button" type="button" value="8" onclick="dcalculator.display.value += '8'">
+            <input class="button" type="button" value="9" onclick="dcalculator.display.value += '9'">
+            <input class="button" type="button" value="/" onclick="dcalculator.display.value += '/'">
+            <input class="button" type="button" value="4" onclick="dcalculator.display.value += '4'">
+            <input class="button" type="button" value="5" onclick="dcalculator.display.value += '5'">
+            <input class="button" type="button" value="6" onclick="dcalculator.display.value += '6'">
+            <input class="button" type="button" value="*" onclick="dcalculator.display.value += '*'">
+            <input class="button" type="button" value="1" onclick="dcalculator.display.value += '1'">
+            <input class="button" type="button" value="2" onclick="dcalculator.display.value += '2'">
+            <input class="button" type="button" value="3" onclick="dcalculator.display.value += '3'">
+            <input class="button" type="button" value="-" onclick="dcalculator.display.value += '-'">
+            <input class="button" type="button" value="0" onclick="dcalculator.display.value += '0'">
+            <input class="button" type="button" value="." onclick="dcalculator.display.value += '.'">
+            <input class="button" type="button" value="C" onclick="dcalculator.display.value = ''">
+            <input class="button equal" type="button" value="=" onclick="dcalculator.display.value = eval(dcalculator.display.value)">
+        </form>
+        <form class="mcalculator mobile" name="mcalculator">
+            <input type="text" readonly name="display" id="display">
+            <input class="button" type="button" value="(" onclick="mcalculator.display.value += '('">
+            <input class="button" type="button" value=")" onclick="mcalculator.display.value += ')'">
+            <input class="button backspace" type="button" value="&#9003;">
+            <input class="button" type="button" value="+" onclick="mcalculator.display.value += '+'">
+            <input class="button" type="button" value="7" onclick="mcalculator.display.value += '7'">
+            <input class="button" type="button" value="8" onclick="mcalculator.display.value += '8'">
+            <input class="button" type="button" value="9" onclick="mcalculator.display.value += '9'">
+            <input class="button" type="button" value="/" onclick="mcalculator.display.value += '/'">
+            <input class="button" type="button" value="4" onclick="mcalculator.display.value += '4'">
+            <input class="button" type="button" value="5" onclick="mcalculator.display.value += '5'">
+            <input class="button" type="button" value="6" onclick="mcalculator.display.value += '6'">
+            <input class="button" type="button" value="*" onclick="mcalculator.display.value += '*'">
+            <input class="button" type="button" value="1" onclick="mcalculator.display.value += '1'">
+            <input class="button" type="button" value="2" onclick="mcalculator.display.value += '2'">
+            <input class="button" type="button" value="3" onclick="mcalculator.display.value += '3'">
+            <input class="button" type="button" value="-" onclick="mcalculator.display.value += '-'">
+            <input class="button" type="button" value="0" onclick="mcalculator.display.value += '0'">
+            <input class="button" type="button" value="." onclick="mcalculator.display.value += '.'">
+            <input class="button" type="button" value="C" onclick="mcalculator.display.value = ''">
+            <input class="button equal" type="button" value="=" onclick="mcalculator.display.value = eval(mcalculator.display.value)">
         </form>
     </div>
 
@@ -45,7 +68,7 @@
     </script>
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script type="text/javascript">
-        VanillaTilt.init(document.querySelector(".calculator"), {
+        VanillaTilt.init(document.querySelector(".desktop"), {
             max: 5,
             speed: 400,
             glare: true,
